@@ -1,25 +1,40 @@
-
 import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./Component/Navbar/navbar";
-import Foodsection from "./Component/Foodsection/Foodsection";
+import Card from "./Component/Card/Card"
+
+import './Api/api'
+import { getPosts } from "./Api/api";
+
+
 
 function App() {
-  const [foods, setFoods] = useState([]);
+
+  const [data, setData] = useState([]);
+  console.log(typeof data);
 
   useEffect(() => {
-    fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=a") // fetch korlam
-      .then((res) => res.json()) // fetched data res e save korlam, jason format a convert korlam
-       .then((data) => setFoods(data.meals || [])); //data ke ui e update korlam through setFoods
+    getPosts().then((response) => setData(response?.meals || []));
   }, []);
 
   return (
     <>
       <Navbar></Navbar>
-      
-        <Foodsection foodData={foods}></Foodsection>
-    </>
-  );
-}
+        <div className="food-section">
+          {data.length > 0 ? 
+            data.map((e) => <Card key={e.idMeal}
+                          strMealThumb={e.strMealThumb}
+                          strMeal={e.strMeal}
+                          strCategory={e.strCategory}
+                          strArea={e.strArea}            
+              />
+            )
+          : 
+          <p>No data found</p>
+          }
+        </div>
+      </>
+  )}
+
 
 export default App;

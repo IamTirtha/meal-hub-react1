@@ -41,3 +41,12 @@
     .rightnav li a:hover {
     color: yellow;
     }
+
+    .food-section{
+        margin: 100px auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        max-width: 1000px;
+    }  
+    

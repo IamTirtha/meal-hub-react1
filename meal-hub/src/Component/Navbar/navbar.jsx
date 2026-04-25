@@ -2,7 +2,7 @@
 import mealImage from '../../assets/meal-photo.jpg'
     const Navbar = () => {
     return (
-        <>
+        
         <nav className="navbar">
         <div className="leftnav">
         <img src={mealImage} className="mealImg" alt="logo" />
@@ -19,7 +19,7 @@ import mealImage from '../../assets/meal-photo.jpg'
         </ul>
         </div>
     </nav>
-        </>
+        
     );
     };
 
