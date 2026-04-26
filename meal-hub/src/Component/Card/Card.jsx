@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import "./Card.css"
+import '../Api/api'
+import '../Foodsection/Foodsection'
 const Card = (props) => {
     return (
         <div className="card">
@@ -14,6 +16,7 @@ const Card = (props) => {
             <p className="text">
             <strong>Area:</strong> {props.strArea}
             </p>
+            <button onClick={()=>props.addToCart(props)} className="btn-add-to-cart">Add to cart</button>
         </div>
         </div>
     );

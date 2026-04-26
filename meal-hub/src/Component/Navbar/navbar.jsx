@@ -1,9 +1,10 @@
 // import React from "react";
 import mealImage from '../../assets/meal-photo.jpg'
+import './Navbar.css'
     const Navbar = () => {
     return (
         
-        <nav className="navbar">
+    <nav className="navbar">
         <div className="leftnav">
         <img src={mealImage} className="mealImg" alt="logo" />
         <p>Meal-Hub</p>

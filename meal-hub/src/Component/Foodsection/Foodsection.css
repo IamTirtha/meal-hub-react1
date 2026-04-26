@@ -1,0 +1,18 @@
+.food-section-parents{
+    display: flex;
+    margin: 100px auto;
+    /* max-width: 1000px; */
+    gap: 30px;
+}
+
+.food-section{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    } 
+
+    .cart-section{
+        background-color: rgb(132, 244, 132);
+        width: 25%;
+        border-radius: 12px;
+    }

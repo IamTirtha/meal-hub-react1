@@ -1,0 +1,45 @@
+
+    .navbar {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ce8787;
+    }
+
+    .leftnav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    }
+
+    .leftnav p {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    }
+
+    .mealImg {
+    border: 3px solid orange;
+    border-radius: 50%;
+    width: 50px;
+    }
+
+    .rightnav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    }
+
+    .rightnav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    }
+
+    .rightnav li a:hover {
+    color: yellow;
+    }
+
+    
